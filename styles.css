@@ -1,0 +1,137 @@
+.myContainer {
+    display: flex;
+    width: 100vw;
+}
+
+/* Side Bar styles */
+
+.sideBar-container {
+    background-color: #6A2C70;
+    height: 100vh;
+}
+
+.sideLogo {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.sideLogo img {
+    width: 170px;
+}
+
+.sideMenuItems {
+    width: 202px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideMenuItems a, #userSesion {
+    color: #e1e1e1;
+    background-color: rgba(255,255,255,.3);
+    margin: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 6px 0 6px 14px;
+}
+
+.sideMenuItems a:hover {
+    background-color: rgba(100,100,100,.6);
+    color: #f5f5f5;
+}
+
+.signOut-cotainer #btnSignOut {
+    display: none;
+    margin-top: -6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.signOut-cotainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.signOut-cotainer:hover #userSesion {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.signOut-cotainer:hover #btnSignOut {
+    display: block;
+}
+
+@media (max-width: 769px) {
+
+    .sideBar {
+        width: 160px;
+    }
+
+    .sideLogo img {
+        width: 140px;
+    }
+
+    .sideMenuItems {
+        width: 160px;
+    }
+
+    .sideMenuItems a, #userSesion {
+        padding: 1px 0 1px 8px;
+    }
+
+}
+
+@media (max-width: 426px) {
+
+    .sideBar-container {
+        position: fixed;
+        width: 100vw;
+        height: 55px;
+        bottom: 0;
+    }
+
+    .sideBar {
+        width: 100%;
+    }
+
+    .sideLogo {
+        display: none;
+    }
+
+    .sideMenuItems {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sideMenuItems a, #userSesion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 3px;
+        background-color: transparent;
+        margin: 9px 14px;
+        transition: right .2s;
+    }
+
+    .signOut-cotainer #btnSignOut {
+        position: absolute;
+        color: #f5f5f5;
+        background-color: #6A2C70;
+        display: flex;
+        width: 100px;
+        flex-direction: row;
+        bottom: 41px;
+        right: -120px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 6px;
+        height: 40px;
+        padding: 0 6px;
+        transition: right .2s;
+    }
+
+    .signOut-cotainer:hover #btnSignOut {
+        right: -14px;
+        
+    }
+  
+}
